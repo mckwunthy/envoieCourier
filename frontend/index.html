@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://localhost/envoieCourier/frontend/assets/css/myMain.css">
+		<title>Couriel</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="title">
+				<h1>contact</h1>
+			</div>
+			<div class="content pad-10 relative">
+				<div class="error error-server absolute none">erreur serveur</div>
+				<form action="../backend/api/sendForm.php" method="post" name="formMessage" enctype="multipart/form-data">
+					<div class="input-line-one flex gap-5">
+						<input type="text" name="firstname" id="firstname" placeholder="Votre nom" class="flex-1" required>
+						<input type="text" name="lastname" id="lastname" placeholder="Votre prénom" class="flex-1" required>
+					</div>
+					<div class="error error-firstname">
+						erreur
+					</div>
+					<div class="error error-lastname">
+						erreur
+					</div>
+					<div class="input-line-two flex">
+						<input type="email" name="email" id="email" placeholder="Votre email" class="flex-1" required>
+					</div>
+					<div class="error error-email">
+						erreur
+					</div>
+					<div class="input-line-three flex">
+						<input type="text" name="subjet" id="subjet" placeholder="Le sujet de votre message" class="flex-1" required>
+					</div>
+					<div class="error error-subjet">
+						erreur
+					</div>
+					<div class="line-textarea flex">
+						<textarea name="message" id="message" placeholder="Votre message ..." class="flex-1" required></textarea>
+					</div>
+					<div class="error error-message">
+						erreur
+					</div>
+					<div class="bt-submit flex">
+						<input type="submit" value="envoyer" class="flex-1">
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<script src="http://localhost/envoieCourier/frontend/assets/js/main.js"></script>
+	</body>
+
+</html>
